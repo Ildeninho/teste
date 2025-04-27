@@ -1,0 +1,26 @@
+{
+  "name": "sys_int",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./style/style.css -o ./style/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranixx1/Sys_int.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ranixx1/Sys_int/issues"
+  },
+  "homepage": "https://github.com/ranixx1/Sys_int#readme",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.14"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

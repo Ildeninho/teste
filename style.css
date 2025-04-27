@@ -1,0 +1,119 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body{
+    background-color: #f6f7f8;
+}
+i {
+    display: none;
+}
+.size-option {
+    transition: all 0.2s ease;
+  }
+  
+  .add-to-cart-modal {
+    transition: transform 0.2s ease;
+  }
+  
+  .add-to-cart-modal:hover {
+    transform: translateY(-2px);
+  }
+  
+  .remove-from-cart-btn {
+    transition: background-color 0.2s ease;
+  }
+  .color-option {
+    position: relative;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.color-option.selected {
+    border-color: #1D2B20;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px #a24c5e;
+}
+
+
+.size-option {
+    transition: all 0.2s ease;
+}
+
+.color-option {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-option.selected::after {
+    content: "✓";
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background: #10b981;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stars-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  transition: color 0.2s, transform 0.2s;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+.star.selected {
+  color: #fbbf24;
+}
+.star.selected:hover {
+  transform: scale(1.2);
+}
+.star.selected:hover ~ .star {
+  color: #e5e7eb;
+}
+/* Modal interno no desktop */
+@media (min-width: 1024px) {
+  #cart-modal {
+    align-items: center;
+  }
+  #cart-modal > div {
+    width: 100%;
+    max-width: 40rem; /* ideal para um modal leve */
+    max-height: 80vh;
+
+  }
+}
+
+/* Estilo para os itens do carrinho */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.875rem;
+}
+button, label {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#cart-modal {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+#cart-items > div {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#cart-modal > div {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
